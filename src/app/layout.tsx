@@ -10,8 +10,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "TechNova – Technology for Life",
-  description: "Dein Tech-Shop für Notebooks, Smartphones, PC-Systeme und mehr.",
+  title: "Raumwerk – Möbel & Interior Design",
+  description: "Hochwertige, designorientierte Möbel für dein Zuhause – von Raumwerk.",
 };
 
 export default function RootLayout({

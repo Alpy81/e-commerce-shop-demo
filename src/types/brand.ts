@@ -1,7 +1,7 @@
-export interface Brand {
+export interface Collection {
   id: string;
   name: string;
   slug: string;
-  // Kategorien, in denen diese Marke vertreten ist (für Filter-Logik)
+  description: string;
   categoryIds: string[];
 }
