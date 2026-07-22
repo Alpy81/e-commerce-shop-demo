@@ -1,5 +1,6 @@
 .nav {
   display: none;
+  position: relative;
 }
 
 @media (min-width: 1024px) {
@@ -31,4 +32,62 @@
 
 .link:hover {
   color: var(--color-brand-500);
+}
+
+.megaPanel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--color-surface-0);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
+  z-index: 90;
+  animation: fadeSlideIn 0.5s ease-out;
+  transform-origin: top;
+}
+
+.megaPanelInner {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-8);
+}
+
+.megaPanelTitle {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-brand-600);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-4);
+}
+
+.subList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3) var(--space-6);
+  list-style: none;
+}
+
+.subLink {
+  display: block;
+  padding: var(--space-1) 0;
+  font-size: var(--text-base);
+  color: var(--color-ink-900);
+  transition: color 0.15s ease;
+}
+
+.subLink:hover {
+  color: var(--color-brand-500);
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
