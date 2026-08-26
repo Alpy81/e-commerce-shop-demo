@@ -11,7 +11,11 @@ export const categories: Category[] = [
       { id: "couchtische", name: "Couchtische", slug: "couchtische" },
       { id: "tv-moebel", name: "TV-Möbel", slug: "tv-moebel" },
       { id: "wohnwaende", name: "Wohnwände", slug: "wohnwaende" },
-      { id: "regale-buecherregale", name: "Regale & Bücherregale", slug: "regale-buecherregale" },
+      {
+        id: "regale-buecherregale",
+        name: "Regale & Bücherregale",
+        slug: "regale-buecherregale",
+      },
       { id: "teppiche", name: "Teppiche", slug: "teppiche" },
     ],
   },
@@ -21,21 +25,33 @@ export const categories: Category[] = [
     slug: "schlafzimmer",
     subcategories: [
       { id: "betten", name: "Betten", slug: "betten" },
-      { id: "kleiderschraenke", name: "Kleiderschränke", slug: "kleiderschraenke" },
+      {
+        id: "kleiderschraenke",
+        name: "Kleiderschränke",
+        slug: "kleiderschraenke",
+      },
       { id: "nachttische", name: "Nachttische", slug: "nachttische" },
       { id: "kommoden", name: "Kommoden", slug: "kommoden" },
-      { id: "schlafzimmerprogramme", name: "Schlafzimmerprogramme", slug: "schlafzimmerprogramme" },
+      {
+        id: "schlafzimmerprogramme",
+        name: "Schlafzimmerprogramme",
+        slug: "schlafzimmerprogramme",
+      },
     ],
   },
   {
     id: "matratzen-lattenroste",
-    name: "Matratzen & Lattenroste",
+    name: "Matratzen",
     slug: "matratzen-lattenroste",
     subcategories: [
       { id: "matratzen", name: "Matratzen", slug: "matratzen" },
       { id: "lattenroste", name: "Lattenroste", slug: "lattenroste" },
       { id: "topper", name: "Topper", slug: "topper" },
-      { id: "bettdecken-kissen", name: "Bettdecken & Kissen", slug: "bettdecken-kissen" },
+      {
+        id: "bettdecken-kissen",
+        name: "Bettdecken & Kissen",
+        slug: "bettdecken-kissen",
+      },
     ],
   },
   {
@@ -87,8 +103,16 @@ export const categories: Category[] = [
     slug: "kinderzimmer",
     subcategories: [
       { id: "kinderbetten", name: "Kinderbetten", slug: "kinderbetten" },
-      { id: "kinderschraenke", name: "Kinderschränke", slug: "kinderschraenke" },
-      { id: "kinderschreibtische", name: "Kinderschreibtische", slug: "kinderschreibtische" },
+      {
+        id: "kinderschraenke",
+        name: "Kinderschränke",
+        slug: "kinderschraenke",
+      },
+      {
+        id: "kinderschreibtische",
+        name: "Kinderschreibtische",
+        slug: "kinderschreibtische",
+      },
     ],
   },
   {
@@ -96,7 +120,11 @@ export const categories: Category[] = [
     name: "Outdoor & Garten",
     slug: "outdoor-garten",
     subcategories: [
-      { id: "gartenmoebel-sets", name: "Gartenmöbel-Sets", slug: "gartenmoebel-sets" },
+      {
+        id: "gartenmoebel-sets",
+        name: "Gartenmöbel-Sets",
+        slug: "gartenmoebel-sets",
+      },
       { id: "loungemoebel", name: "Loungemöbel", slug: "loungemoebel" },
       { id: "sonnenschirme", name: "Sonnenschirme", slug: "sonnenschirme" },
     ],

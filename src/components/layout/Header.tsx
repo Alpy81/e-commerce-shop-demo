@@ -9,7 +9,7 @@ export default function Header() {
       <div className={styles.inner}>
         <Link href="/" className={styles.logoLink}>
           <Image
-            src="/images/raumwerk-logo-white-transparent-v2.png"
+            src="/images/raumwerk-logo-white-transparent-v3.png"
             alt="Raumwerk – Möbel & Interior Design"
             width={560}
             height={186}
