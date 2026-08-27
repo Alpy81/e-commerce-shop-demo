@@ -67,7 +67,7 @@ export const categories: Category[] = [
   },
   {
     id: "buero-arbeiten",
-    name: "Büro & Arbeiten",
+    name: "Büro",
     slug: "buero-arbeiten",
     subcategories: [
       { id: "schreibtische", name: "Schreibtische", slug: "schreibtische" },
@@ -88,7 +88,7 @@ export const categories: Category[] = [
   },
   {
     id: "flur-garderobe",
-    name: "Flur & Garderobe",
+    name: "Flur",
     slug: "flur-garderobe",
     subcategories: [
       { id: "garderoben", name: "Garderoben", slug: "garderoben" },
@@ -137,17 +137,6 @@ export const categories: Category[] = [
       { id: "deckenleuchten", name: "Deckenleuchten", slug: "deckenleuchten" },
       { id: "stehlampen", name: "Stehlampen", slug: "stehlampen" },
       { id: "tischlampen", name: "Tischlampen", slug: "tischlampen" },
-    ],
-  },
-  {
-    id: "deko-accessoires",
-    name: "Deko & Accessoires",
-    slug: "deko-accessoires",
-    subcategories: [
-      { id: "spiegel-deko", name: "Spiegel", slug: "spiegel-deko" },
-      { id: "bilderrahmen", name: "Bilderrahmen", slug: "bilderrahmen" },
-      { id: "vasen", name: "Vasen", slug: "vasen" },
-      { id: "kissen", name: "Kissen", slug: "kissen" },
     ],
   },
 ];
