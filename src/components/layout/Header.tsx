@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import MainNav from "./MainNav";
+import SearchBar from "./SearchBar";
+import MobileNav from "./MobileNav";
 import styles from "./Header.module.css";
 
 export default function Header() {
@@ -22,8 +24,10 @@ export default function Header() {
         <MainNav />
 
         <div className={styles.actionsPlaceholder}>
-          {/* Suche, Warenkorb, Account folgen in 6.4 / 6.6 */}
+          <SearchBar />
         </div>
+
+        <MobileNav />
       </div>
     </header>
   );

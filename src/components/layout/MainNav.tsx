@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { categories } from "@/data/categories";
 import styles from "./MainNav.module.css";
@@ -8,21 +8,34 @@ import styles from "./MainNav.module.css";
 export default function MainNav() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
-  const active = categories.find((c) => c.id === activeCategory)  
+  useEffect(() => {
+    function handleEscape(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        setActiveCategory(null);
+      }
+    }
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, []);
+
+  const active = categories.find((c) => c.id === activeCategory);
 
   return (
-    <nav
-      className={styles.nav}
-      onMouseLeave={() => setActiveCategory(null)}
-    >
+    <nav className={styles.nav} onMouseLeave={() => setActiveCategory(null)}>
       <ul className={styles.list}>
         {categories.map((category) => (
           <li
             key={category.id}
             className={styles.item}
             onMouseEnter={() => setActiveCategory(category.id)}
+            onFocus={() => setActiveCategory(category.id)}
           >
-            <Link href={`/kategorie/${category.slug}`} className={styles.link}>
+            <Link
+              href={`/kategorie/${category.slug}`}
+              className={styles.link}
+              aria-expanded={activeCategory === category.id}
+              aria-haspopup="true"
+            >
               {category.name}
             </Link>
           </li>
