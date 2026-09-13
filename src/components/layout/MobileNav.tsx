@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { categories } from "@/data/categories";
 import MobileNavToggle from "./MobileNavToggle";
@@ -15,6 +15,24 @@ export default function MobileNav() {
     setExpandedCategory(null);
   }
 
+  useEffect(() => {
+    function handleEscape(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        closeMenu();
+      }
+    }
+
+    if (isOpen) {
+      document.addEventListener("keydown", handleEscape);
+      document.body.style.overflow = "hidden";
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleEscape);
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   return (
     <>
       <MobileNavToggle
@@ -24,8 +42,17 @@ export default function MobileNav() {
 
       {isOpen && (
         <>
-          <div className={styles.overlay} onClick={closeMenu} />
-          <div className={styles.panel}>
+          <div
+            className={styles.overlay}
+            onClick={closeMenu}
+            aria-hidden="true"
+          />
+          <div
+            className={styles.panel}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Hauptmenü"
+          >
             <ul className={styles.list}>
               {categories.map((category) => (
                 <li key={category.id} className={styles.item}>

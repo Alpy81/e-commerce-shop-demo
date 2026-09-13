@@ -3,6 +3,8 @@ import Link from "next/link";
 import MainNav from "./MainNav";
 import SearchBar from "./SearchBar";
 import MobileNav from "./MobileNav";
+import CartIcon from "./CartIcon";
+import WishlistIcon from "./WishlistIcon";
 import styles from "./Header.module.css";
 
 export default function Header() {
@@ -25,6 +27,23 @@ export default function Header() {
 
         <div className={styles.actionsPlaceholder}>
           <SearchBar />
+          <Link
+            href="/konto"
+            className={styles.accountLink}
+            aria-label="Mein Konto"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <circle cx="12" cy="8" r="4" />
+              <path d="M4 20c0-4 3.5-7 8-7s8 3 8 7" />
+            </svg>
+          </Link>
+          <WishlistIcon />
+          <CartIcon />
         </div>
 
         <MobileNav />
