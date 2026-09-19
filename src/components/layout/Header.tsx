@@ -10,7 +10,7 @@ import styles from "./Header.module.css";
 export default function Header() {
   return (
     <header className={styles.header}>
-      <div className={styles.inner}>
+      <div className={styles.topRow}>
         <Link href="/" className={styles.logoLink}>
           <Image
             src="/images/raumwerk-logo-white-transparent-v3.png"
@@ -23,10 +23,11 @@ export default function Header() {
           />
         </Link>
 
-        <MainNav />
-
-        <div className={styles.actionsPlaceholder}>
+        <div className={styles.searchSlot}>
           <SearchBar />
+        </div>
+
+        <div className={styles.iconsGroup}>
           <Link
             href="/konto"
             className={styles.accountLink}
@@ -47,6 +48,26 @@ export default function Header() {
         </div>
 
         <MobileNav />
+      </div>
+
+      <div className={styles.bottomRow}>
+        <div className={styles.bottomRowInner}>
+          <div className={styles.navSection}>
+            <MainNav />
+          </div>
+          <div className={styles.authLinks}>
+            <Link href="/anmelden" className={styles.authLink}>
+              Anmelden
+            </Link>
+            <span className={styles.authDivider}>/</span>
+            <Link href="/registrieren" className={styles.authLink}>
+              Registrieren
+            </Link>
+            <Link href="/ueber-uns" className={styles.authLink}>
+              Über uns
+            </Link>
+          </div>
+        </div>
       </div>
     </header>
   );

@@ -3,7 +3,7 @@
   display: none;
   align-items: center;
   width: 100%;
-  max-width: 360px;
+  max-width: 640px;
 }
 
 @media (min-width: 640px) {
